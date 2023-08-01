@@ -1,0 +1,1171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+    overflow-x: hidden;
+    min-height: 5000px;
+}
+
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: rgba(127, 75, 248, 0.988);
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: white;
+    height: 60px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+nav .logo {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+    font-size: 20px;
+   
+}
+
+nav ul {
+    display:inline-flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+   
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+   
+}
+
+nav ul li a:hover {
+    color: black;
+    background-color:rgb(8, 206, 255) ;
+}
+
+
+/* hamburger menu */
+.menu-toggel {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    right: 365px;
+}
+
+.menu-toggel input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggel span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* hamburger menu animation */
+.menu-toggel span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggel span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggel input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggel input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggel input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+/* tampilan */
+.tampilan {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('001.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.tampilan .conten h3 {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 4em;
+
+   
+}
+
+.tampilan .conten h3 span {
+    color:  #ffd700;
+}
+
+.tampilan .conten {
+    padding: 0.1rem 6rem 0;
+    
+ }
+
+ .tampilan .conten p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+ }
+
+/* halaman beranda */
+.hero {
+    min-height: 100vh;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    color: #ffd700;
+    padding: 3rem 0 0;
+    
+}
+
+.hero h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.hero h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    color: rgb(14, 14, 14);
+    padding: 3rem 0 0;
+}
+
+.hero h2 span {
+    color: #ffd700;
+}
+
+.hero h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    color: #ffd700;
+    padding: 2rem 0 0;
+}
+
+.hero h3 span {
+    color: rgb(14, 14, 14);
+}
+    
+
+.hero p {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    text-align: justify;
+}
+
+.hero .conten {
+    display: inline;
+}
+   
+
+
+/* makanan section */
+.makanankhas {
+    min-height: 100vh;
+}
+
+.makanankhas h2 {
+    text-align: center;
+    font-size: 2rem;
+   font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    color: #ffd700;
+    padding: 6rem 0 1.2rem;
+   
+}
+
+.makanankhas h2 span {
+    color: rgb(14, 14, 14);
+}
+
+.makanankhas .row {
+    display:flex;
+}
+
+.makanankhas .row .makanan-img {
+    flex: 1 1 30rem;
+}
+
+.makanankhas .row .makanan-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+.makanankhas .row .makanan-img img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.makanankhas .row .conten {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.makanankhas .row .conten h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 0 5%;
+}
+
+.makanankhas .row .conten h4 span {
+    color: rgb(14, 14, 14);
+}
+
+.makanankhas .row .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+/*makanan onde2  */
+.makanankhas .is {
+    display:flex;
+}
+
+.makanankhas .is .kue-img {
+    flex: 1 1 30rem;
+}
+
+.makanankhas .is .kue-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+.makanankhas .is .kue-img img {
+    width: 100%;
+    padding: 5% 0;
+    border-radius: 15%;
+}
+
+.makanankhas .is .cont {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.makanankhas .is .cont h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 5% 5% 0;
+}
+
+.makanankhas .is .cont h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.makanankhas .is .cont p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+/* selesai */
+
+/* barungko */
+.makanankhas .ko {
+    display:flex;
+}
+
+.makanankhas .ko .barong-img {
+    flex: 1 1 30rem;
+}
+
+.makanankhas .ko .barong-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+.makanankhas .ko .barong-img img {
+    width: 100%;
+    padding: 5% 0;
+    border-radius: 15%;
+}
+
+.makanankhas .ko .conten {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.makanankhas .ko .conten h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 5% 5% 0;
+}
+
+.makanankhas .ko .conten h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.makanankhas .ko .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+/* selesai */
+
+
+/* sanggara peppe */
+.makanankhas .ar {
+    display:flex;
+}
+
+.makanankhas .ar .sanggar-img {
+    flex: 1 1 30rem;
+}
+
+.makanankhas .ar .sanggar-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+
+.makanankhas .ar .sanggar-img img {
+    width: 100%;
+    padding: 5% 0;
+    border-radius: 15%;
+}
+
+.makanankhas .ar .conten {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.makanankhas .ar .conten h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 5% 5% 0;
+}
+
+.makanankhas .ar .conten h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.makanankhas .ar .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+/* selesai */
+
+
+
+/* makanan slesai */
+
+
+
+/* rumah mulai */
+.rumahadat {
+    min-height: 100vh;
+}
+
+.rumahadat h1 {
+    text-align: center;
+    font-size: 2rem;
+   font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    color: #ffd700;
+    padding: 6rem 0 1.2rem;
+   
+}
+
+.rumahadat h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.rumahadat .oi {
+    display:flex;
+}
+
+.rumahadat .oi .rumah-img {
+    flex: 1 1 30rem;
+}
+
+.rumahadat .oi .rumah-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+.rumahadat .oi .rumah-img img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.rumahadat .oi .conten {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.rumahadat .oi .conten h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 0 5%;
+}
+
+.rumahadat .oi .conten h2 span {
+    color: rgb(14, 14, 14);
+}
+
+.rumahadat .oi .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+.paragraf p {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 1.5% 2% ;
+    text-align: justify;
+}
+
+/* rumah selesai */
+
+
+/* tari mulai */
+.tarian {
+    min-height: 100vh;
+}
+
+.tarian h1 {
+    text-align: center;
+    font-size: 2rem;
+   font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    color: #ffd700;
+    padding: 6rem 0 1.2rem;
+   
+}
+
+.tarian h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.tarian .are {
+    display:flex;
+}
+
+.tarian .are .tarian-img {
+    flex: 1 1 30rem;
+}
+
+.tarian .are .tarian-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+.tarian .are .tarian-img img {
+    width: 100%;
+    padding: 0;
+    border-radius: 10%;
+}
+
+.tarian .are .conten {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.tarian .are .conten h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 0 5%;
+}
+
+.tarian .are .conten h2 span {
+    color: rgb(14, 14, 14);
+}
+
+.tarian .are .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5% 0 ;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+.para2 p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 2% 0;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+/* tari 2 */
+.tari2 .yoi {
+    display:flex;
+}
+
+.tari2 .yoi .tari-img {
+    flex: 1 1 30rem;
+}
+
+.tari2 .yoi .tari-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+.tari2 .yoi .tari-img img {
+    width: 100%;
+    padding: 5% 0;
+    border-radius: 15%;
+}
+
+.tari2 .yoi .conten {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.tari2 .yoi .conten h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 5% 5% 0;
+}
+
+.tari2 .yoi .conten h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.tari2 .yoi .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+/* seklesai */
+
+/* tari 3 */
+.tari3 .to {
+    display:flex;
+}
+
+.tari3 .to .tari-img {
+    flex: 1 1 30rem;
+}
+
+.tari3 .to .tari-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+.tari3 .to .tari-img img {
+    width: 100%;
+    padding: 5% 0;
+    border-radius: 15%;
+}
+
+.tari3 .to .conten {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.tari3 .to .conten h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 5% 5% 0;
+}
+
+.tari3 .to .conten h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.tari3 .to .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+/* selesai */
+
+/* tari selesai */
+
+
+
+
+/* senjata mulai */
+.senjata {
+    min-height: 100vh;
+}
+
+.senjata h1 {
+    text-align: center;
+    font-size: 2rem;
+   font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    color: #ffd700;
+    padding: 6rem 0 1.2rem;
+   
+}
+
+.senjata h1 span {
+    color: rgb(14, 14, 14);
+}
+
+.senjata .no {
+    display:flex;
+}
+
+.senjata .no .senjata-img {
+    flex: 1 1 30rem;
+}
+
+.senjata .no .senjata-img:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+.senjata .no .senjata-img img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.senjata .no .conten {
+    flex: 1 1 35rem;
+    padding: 0 1 rem;
+}
+
+.senjata .no .conten h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #710df3;
+    font-style: italic;
+    padding: 0 5%;
+}
+
+.senjata .no .conten h2 span {
+    color: rgb(14, 14, 14);
+}
+
+.senjata .no .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 0 5%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+/* senjata selesai */
+
+
+/* responsive breakpoint */
+
+/* ukuran tabel */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+
+    section h3 {
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggel {
+        display: flex;
+    }
+    /* navbar animasi */
+    nav ul {
+        position: absolute;
+        left:-243px;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(12, 12, 12);
+        z-index: 0;
+        transform: translatex(0%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translatex(100%);
+    }  
+
+    /* end navbar  animasi */
+
+
+
+
+
+    /* tampilan interface */
+    .tampilan .conten h3 {
+        font-size: 3rem;
+        margin: auto;
+       font-weight: bold;
+       font-family: Arial, Helvetica, sans-serif;
+       font-style: italic;
+       padding:0 ;
+    }
+
+   
+
+    /* end interface */
+
+
+
+    /* modifan judul perkembangan */
+    .tampilan .yoi {
+        flex-wrap: wrap;
+    }
+
+    .tampilan .yoi .tampilan-img img {
+        width: 15rem;
+        height: 15rem;
+        justify-content: center;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    .hero .conten h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero .conten h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero .conten h3 {
+        font-size: 1.8rem;
+         padding: 2.8rem 8.5rem 0;
+    }
+
+    .hero .conten p {
+        font-size: 1rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* end perekembangan */
+
+
+    /* modifan makanan */
+    .makanankhas .row {
+        flex-wrap: wrap;
+    }
+    
+    .makanankhas .row .makanan-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    
+    .makanankhas .row .conten {
+        padding: 0;
+    }
+
+    .makanankhas h2 {
+        padding: 5rem 0 0.5rem;
+    }
+
+    .makanankhas .row .conten h4 {
+        margin-top: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        
+    }
+
+    .makanankhas .row .conten p{
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* modif onde2 */
+    .makanankhas .is {
+        flex-wrap: wrap;
+    }
+    
+    .makanankhas .is .kue-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        padding: 5% 0;
+    }
+    
+    .makanankhas .is .cont {
+        padding: 0;
+    }
+
+    .makanankhas .is .cont h1 {
+        margin-top: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        
+    }
+
+    .makanankhas .is .cont p{
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    /* selesai */
+
+    /* modif barongko */
+    .makanankhas .ko {
+        flex-wrap: wrap;
+    }
+    
+    .makanankhas .ko .barong-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        padding: 5% 0;
+    }
+    
+    .makanankhas .ko .conten {
+        padding: 0;
+    }
+
+    .makanankhas .ko .conten h1 {
+        margin-top: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        
+    }
+
+    .makanankhas .ko .conten p{
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* selesai */
+
+    /* modifan saanggar peppe */
+    .makanankhas .ar {
+        flex-wrap: wrap;
+    }
+    
+    .makanankhas .ar .sanggar-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        padding: 5% 0;
+    }
+    
+    .makanankhas .ar .conten {
+        padding: 0;
+    }
+
+    .makanankhas .ar .conten h1 {
+        margin-top: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        
+    }
+
+    .makanankhas .ar .conten p{
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    /* selesai */
+
+    
+    /* end makanan khas */
+
+
+
+    /* modifan rumah */
+    .rumahadat .oi {
+        flex-wrap: wrap;
+    }
+    
+    .rumahadat .oi .rumah-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    
+    .rumahadat .oi .conten {
+        padding: 0;
+    }
+
+    .rumahadat h1 {
+        padding: 5rem 0 0.5rem;
+    }
+
+    .rumahadat .oi .conten h2 {
+        margin-top: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        
+    }
+
+    .rumahadat .oi .conten p {
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .paragraf p {
+         font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* modifan rumah selesai */
+
+
+    /* modifan tarian */
+    .tarian .are {
+        flex-wrap: wrap;
+    }
+    
+    .tarian .are .tarian-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    
+    .tarian .are .conten {
+        padding: 0;
+    }
+
+    .tarian h1 {
+        padding: 5rem 0 0.5rem;
+    }
+
+    .tarian .are .conten h2 {
+        margin-top: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        
+    }
+
+    .tarian .are .conten p{
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+
+    .para2 p {
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    /*  */
+
+    /* modifan tari2 */
+    .tari2 .yoi {
+        flex-wrap: wrap;
+    }
+    
+    .tari2 .yoi .tari-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    
+    .tari2 .yoi .conten {
+        padding: 0;
+    }
+
+    .tari2 h1 {
+        padding: 5rem 0 0.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .tari2 .yoi .conten p{
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* slesai */
+
+
+    /* modif tari3 */
+    .tari3 .to {
+        flex-wrap: wrap;
+    }
+    
+    .tari3 .to .tari-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    
+    .tari3 .to .conten {
+        padding: 0;
+    }
+
+    .tari3 h1 {
+        padding: 5rem 0 0.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .tari3 .to .conten p{
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* selesai */
+    
+    /* modifan selesai */
+
+
+    /* modifan senjata */
+     .senjata .no {
+        flex-wrap: wrap;
+    }
+    
+    .senjata .no .senjata-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    
+    .senjata .no .conten {
+        padding: 0;
+    }
+
+    .senjata h1 {
+        padding: 5rem 0 0.5rem;
+    }
+
+    .senjata .no .conten h2 {
+        margin-top: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        
+    }
+
+    .senjata .no .conten p{
+        font-size: 1rem;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    
+    /* modifan rumah selesai */
+
+
+   
+
+}
